@@ -8,9 +8,11 @@ X-ray absorption in Python
 """
 from .version import __version__
 from . import tbabscore
-from .tbabs import tbabs, dgami
+from . import util
+from .tbabs import tbabs, ztbabs, tbfeo, tbgas
 
 __all__ = ['__version__',
-           'tbabscore',
-           'tbabs', 'dgami']
+           'tbabscore', 'util',
+           'tbabs', 'ztbabs', 'tbfeo', 'tbgas',
+           'dgami', 'phfit2', 'vernabs']
 

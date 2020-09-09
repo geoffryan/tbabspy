@@ -36,6 +36,7 @@ static PyObject *tbabscore_phfit2(PyObject *self, PyObject *args,
 
 // Declaring interface to Verner Fortran function.
 void phfit2_(int *z,int *ion,int *shell,float *energ, float *sigma);
+double vernabs(double e,int z);
 
 struct module_state
 {
@@ -85,7 +86,7 @@ static struct PyModuleDef tbabscoreModule = {
 };
 #define INITERROR return NULL
 
-PyMODINIT_FUNC PyInit_jet(void)
+PyMODINIT_FUNC PyInit_tbabscore(void)
 {
     PyObject *module = PyModule_Create(&tbabscoreModule);
     if(module == NULL)
@@ -267,6 +268,7 @@ static PyObject *tbabscore_phfit2(PyObject *self, PyObject *args,
     
     return ret;
 }
+
 
 static PyObject *tbabscore_dgami(PyObject *self, PyObject *args, 
                                  PyObject *kwargs)
