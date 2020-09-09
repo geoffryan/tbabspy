@@ -1,5 +1,8 @@
 *.swp
 *.egg-info
+build/
+*.so
+tbabspy/__pycache__
 
 *.png
 *.txt

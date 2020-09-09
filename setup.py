@@ -1,4 +1,6 @@
-from setuptools import setup, Extension
+import setuptools
+# from setuptools import setup, Extension
+from numpy.distutils.core import setup, Extension
 import numpy as np
 
 version = {}

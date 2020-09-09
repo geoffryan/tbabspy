@@ -167,7 +167,7 @@ static PyObject *tbabscore_tbnew(PyObject *self, PyObject *args,
 
     // Check input array sizes
     int ne = (int)PyArray_DIM(e_arr, 0) - 1;
-    int nparams = (int)PyArray_DIM(param_arr, 0);
+    int nparam = (int)PyArray_DIM(param_arr, 0);
 
     if(ne < 1)
     {
@@ -193,7 +193,7 @@ static PyObject *tbabscore_tbnew(PyObject *self, PyObject *args,
     npy_intp dims[1] = {ne};
     PyObject *photar_obj = PyArray_SimpleNew(1, dims, NPY_DOUBLE);
 
-    if(Fnu_obj == NULL)
+    if(photar_obj == NULL)
     {
         PyErr_SetString(PyExc_RuntimeError, "Could not make photar array.");
         Py_DECREF(e_arr);
@@ -203,7 +203,7 @@ static PyObject *tbabscore_tbnew(PyObject *self, PyObject *args,
     double *photar = PyArray_DATA((PyArrayObject *) photar_obj);
 
     // Calculate the absorption!
-    tbnew(e, ne, param, 0, photarr, NULL, NULL);
+    tbnew(e, ne, param, 0, photar, NULL, NULL);
 
     // Clean up!
     Py_DECREF(e_arr);
@@ -232,7 +232,7 @@ static PyObject *tbabscore_vernabs(PyObject *self, PyObject *args,
     }
 
     // Calculate the absorption!
-    double sigma = vernabs(e, Z);
+    double sigma = vernabs(e, z);
 
     //Build output
     PyObject *ret = Py_BuildValue("d", sigma);
