@@ -17,6 +17,7 @@ ax.plot(E, abs23, label=r'$N_{\mathrm{H}} = 10^{23}$ cm$^{-2}$')
 ax.set(xlabel=r'$E$ (keV)', xscale='log', xlim=(Ebins.min(), Ebins.max()),
        ylabel=r'$F_\nu$ obs / $F_\nu$ source', yscale='log',
        ylim=(1.0e-6, 2))
+ax.legend()
 
 plt.show()
 
