@@ -19,5 +19,7 @@ ax.set(xlabel=r'$E$ (keV)', xscale='log', xlim=(Ebins.min(), Ebins.max()),
        ylim=(1.0e-6, 2))
 ax.legend()
 
+fig.savefig("ex.png")
+
 plt.show()
 
