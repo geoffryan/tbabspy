@@ -2,7 +2,7 @@
 
 ## tbabs X-ray Absorption in Python
 
-This is a very light and unofficial wrapper over Jörn Wilms' `tbabs` XSPEC model.
+This is a very light and unofficial wrapper over Jörn Wilms' `tbabs` XSPEC model.  
 
 ### Install
 

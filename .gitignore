@@ -1,6 +1,7 @@
 *.swp
 *.egg-info
 build/
+*.o
 *.so
 tbabspy/__pycache__
 
